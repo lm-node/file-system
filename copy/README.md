@@ -10,6 +10,7 @@
 * tcp sockets
 * child process stdout and stderr
 
+
     实例：
     fs.createReadStream('/path/to/source').pipe(fs.createWriteStream('/path/to/dest'));
 
