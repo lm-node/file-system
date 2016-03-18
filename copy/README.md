@@ -44,3 +44,25 @@
       start:0,      //start 和 end 值用于读取文件内的特定范围而非整个文件,单位为字节
       end:1000      //start 和 end 都是包含在范围内的（inclusive, 可理解为闭区间）并且以 0 开始
     }
+    
+### ReadStream
+> 该对象由fs.createReadStream()创建返回，是一个ReadStream。该可读流对象不同于其它可读流不是的一点是，该对象包含一个'open'事件。  
+Event:'open'，该事件会在创建文件ReadStream时触发，其回调函数参数是一个文件描述。  
+fd {Integer} ReadStream 所使用的文件描述符。  
+
+### fs.createWriteStream()创建可写流
+    
+    options 是一个包含下列缺省值的对象：
+    { flags: 'w',       //flags 的模式指定为 r+ 而不是默值的 w.
+      encoding: null,
+      mode: 0666,
+      start:0    //用于指定在文件中开始写入数据的位置
+     }
+
+### fs.WriteStream
+
+> 该对象由fs.WriteStream()创建返回，是一个WriteStream。  
+  Event:'open'，该事件会在创建文件ReadStream时触发，其回调函数参数是一个文件描述。  
+  fd {Integer} ReadStream 所使用的文件描述符。
+
+
