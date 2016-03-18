@@ -1,6 +1,6 @@
 #复制文件内容
 
-> 对于体积较大的二进制文件，比如音频、视频文件，动辄几个GB大小，如果使用这先读后存，很容易使内存“爆仓”。理想的方法应该是读一部分，写一部分，不管文件有大，只要时间允许，总会处理完成，这里就需要用到流的概念。
+> 对于体积较大的二进制文件，比如音频、视频文件，动辄几个GB大小，如果使用先读后存，很容易使内存“爆仓”。理想的方法应该是读一部分，写一部分，不管文件有大，只要时间允许，总会处理完成，这里就需要用到流的概念。
 
 ### Stream在nodejs中是EventEmitter的实现，并且有多种实现形式，例如：
 
@@ -10,7 +10,7 @@
 * tcp sockets
 * child process stdout and stderr
 
-    
+    实例：
     fs.createReadStream('/path/to/source').pipe(fs.createWriteStream('/path/to/dest'));
 
     // pipe自动调用了data,end等事件
